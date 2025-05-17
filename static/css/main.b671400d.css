@@ -1,0 +1,2 @@
+.app{display:flex;flex-direction:column;gap:20px;margin-left:10%;margin-top:2%;min-height:100vh;width:80%;button{border-radius:5px;color:#282c34;cursor:pointer;font-size:16px;padding:10px 20px;transition:background-color .3s ease;&:disabled{cursor:not-allowed}}}.Enable-input,.Enable-label,.refresh-input,.refresh-label{font-size:24px}.Enable-input[type=checkbox],.refresh-input[type=checkbox]{cursor:pointer;height:18px;width:18px}
+/*# sourceMappingURL=main.b671400d.css.map*/
