@@ -1,0 +1,8 @@
+.Enable-input,.Enable-label,.refresh-input,.refresh-label{
+    font-size: 24px;
+}
+.refresh-input[type="checkbox"],.Enable-input[type="checkbox"]{
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}

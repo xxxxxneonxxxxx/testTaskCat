@@ -1,26 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React,{useState,useEffect} from "react";
+import Controls from "./Controls";
+import './App.scss';
+import ImageCat from "./ImageCat";
+export function App() {
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [enable, setEnable] = useState<boolean>(true);
+    const [refresh, setRefresh] = useState<boolean>(false);
+    const [loading, setLoading] = useState<boolean>(false);
+
+    return (
+        <div className={'app'}>
+            <Controls enable={enable}
+                      refresh={refresh}
+                      onEnabled={() => setEnable(!enable)}
+                      onRefresh={()=>setRefresh(!refresh)}
+            ></Controls>
+            <button disabled={!enable || loading} onClick={() => setLoading(!loading)}>Get cat</button>
+            <ImageCat enabled={enable} refresh={refresh} loading={loading} onLoading={()=>setLoading(!loading)}/>
+        </div>
+    )
 }
-
-export default App;
